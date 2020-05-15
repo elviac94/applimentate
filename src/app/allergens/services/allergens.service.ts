@@ -37,6 +37,7 @@ export class AllergensService {
             case 'ALLERGENS.FISH':
             case 'ALLERGENS.SOY':
                 return {
+                    title: 'ALLERGENS.FOODS.TITLE' ,
                     name: id,
                     icon: this.getIconFilename( id ),
                     imgSummary: this.getSummaryImg( id ),
