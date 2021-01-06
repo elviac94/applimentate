@@ -11,29 +11,18 @@ export class BmiService {
     return !isNaN( result ) && result !== Infinity ? result : 0;
   }
 
-  public silhouetteStylesDependingOnBmiResult(bmiResult: number): any {
-    const styles: any = {};
+  public silhouetteStylesDependingOnBmiResult(bmiResult: number): string {
+    
     if ( bmiResult <= BmiRange.SLIM ) {
-      styles.marginLeft = '0%';
-      styles.right = 'initial';
-      styles.width = '16%';
+      return 'slim';
     } else if ( bmiResult <= BmiRange.FIT ) {
-      styles.marginLeft = '18%';
-      styles.right = 'initial';
-      styles.width = '18%';
+      return 'fit';
     } else if ( bmiResult <= BmiRange.OVERWEIGHT ) {
-      styles.marginLeft = '36%';
-      styles.right = 'initial';
-      styles.width = '18%';
+      return 'overweight';
     } else if ( bmiResult <= BmiRange.OBESE ) {
-      styles.marginLeft = '0%';
-      styles.right = '24%';
-      styles.width = '17%';
+      return 'obese';
     } else {
-      styles.marginLeft = '0%';
-      styles.right = '17px';
-      styles.width = '19%';
+      return 'morbid';
     }
-    return styles;
   }
 }

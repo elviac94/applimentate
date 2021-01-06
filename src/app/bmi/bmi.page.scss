@@ -31,6 +31,32 @@ ion-content {
         position: absolute;
         top: 202px;
         height: 43vw;
+
+        &.slim {
+            margin-left: 0%;
+            right: initial;
+            width: 16%;
+        }
+        &.fit{
+            margin-left: 18%;
+            right: initial;
+            width: 18%;
+        }
+        &.overweight{
+            margin-left: 36%;
+            right: initial;
+            width: 18%;
+        }
+        &.obese{
+            margin-left: 0%;
+            right: 24%;
+            width: 17%;
+        }
+        &.morbid{
+            margin-left: 0%;
+            right: 17px;
+            width: 19%;
+        }
     }
 
     #image {

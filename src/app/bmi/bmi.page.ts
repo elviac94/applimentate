@@ -41,7 +41,7 @@ export class BmiPage implements OnInit {
 
   onClickCalcBMI(): void {
     this.bmiResult = this.bmiService.calcBMI(this.height, this.weight);
-    this.updateChosenSilhouette();
+    this.updateChosenSilhouetteClassName();
   }
 
   disableCalcBMI(): boolean {
@@ -52,9 +52,11 @@ export class BmiPage implements OnInit {
     return '../../assets/img/bmi/bmi_' + this.genre + '_silhouettes.png';
   }
 
-  private updateChosenSilhouette(): void {
-    const chosenSilhouette = this.elRef.nativeElement.querySelector( 'div.choosen-silhouette' ),
-      styles = this.bmiService.silhouetteStylesDependingOnBmiResult(this.bmiResult);
-    Object.keys(styles).map(key => chosenSilhouette.style[key] = styles[key]);
+  private updateChosenSilhouetteClassName(): void {
+    const chosenSilhouetteClass = 'choosen-silhouette',
+      chosenSilhouetteHtmlElement = this.elRef.nativeElement.querySelector( `div.${chosenSilhouetteClass}` ),
+      className = this.bmiService.silhouetteStylesDependingOnBmiResult(this.bmiResult);
+    chosenSilhouetteHtmlElement.className = `${chosenSilhouetteClass} ${className}`;
+      
   }
 }
