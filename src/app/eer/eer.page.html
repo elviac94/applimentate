@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
-    <ion-title>{{'BMI.SUBTITLE' | translate}}</ion-title>
+    <ion-title>{{'EER.SUBTITLE' | translate}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -19,8 +19,12 @@
       <ion-input clearInput appToPositiveNumber type="number" min="1" [(ngModel)]="weight" [ngModelOptions]="{standalone: true}">
       </ion-input>
     </ion-item>
+    <ion-item>
+      <ion-label position="floating">{{'EER.AGE' | translate}} </ion-label>
+      <ion-input clearInput appToPositiveNumber type="number" min="1" [(ngModel)]="age" [ngModelOptions]="{standalone: true}">
+      </ion-input>
+    </ion-item>
   </form>
-
 
   <ion-radio-group [value]="genre" #genreRadioButton>
     <ion-row>
@@ -39,21 +43,14 @@
     </ion-row>
   </ion-radio-group>
 
-  <div class="contenedor animated fadeIn" [hidden]="!bmiResult">
-    <img id="image" src="{{getSilhouetteImg()}}">
-    <div class="choosen-silhouette"></div>
+  <div class="result animated fadeIn" [hidden]="!result">
+    <ion-label>{{'SHARED.RESULT' | translate}}: {{ result | number:'1.0-2'}}</ion-label>
   </div>
-
-  <div class="separator"></div>
-
-  <div class="result animated fadeIn" [hidden]="!bmiResult">
-    <ion-label>{{'SHARED.RESULT' | translate}}: {{ bmiResult | number:'1.0-2'}}</ion-label>
-  </div>
-
 </ion-content>
+
 <ion-footer>
   <ion-toolbar>
-    <ion-button expand="full" fill="clear" (click)="onClickCalcBMI()" [disabled]="disableCalcBMI()">
+    <ion-button expand="full" fill="clear" (click)="onClickCalc()" [disabled]="disableButton()">
       <ion-label>{{'SHARED.CALC' | translate}}</ion-label>
     </ion-button>
   </ion-toolbar>

@@ -1,18 +1,14 @@
-ion-item{
-    --background: var(--green-sofest);
-    ion-label {
-        --background: var(--green-sofest);
-    }
-}
+@import '../../theme/mixins/auto-result.mixin.scss';
+@import '../../theme/mixins/auto-ion-item-bg.mixin.scss';
 
 ion-content {
     position: relative;
     overflow: scroll;
     background-color: var(--green-sofest);
     margin-bottom: 1000px;
+
+    @include auto-ion-item-bg(var(--green-sofest));
 }
-
-
 
 .container {
     background-color: var(--green-sofest);
@@ -78,20 +74,4 @@ ion-content {
 }
 
 
-.bmi-result {
-    background-color: blue;
-    position: absolute;
-    width: 300px;
-    left: calc(50% - 150px);
-    ion-label {
-        width: 295px;
-        text-align: center;
-        font-weight: bold;
-        font-size: 18px;
-        position: absolute;
-        margin: 20px 0px;
-    }
-}
-
-
-
+@include auto-result;

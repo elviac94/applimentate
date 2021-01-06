@@ -73,7 +73,14 @@
   },
   "BMI": {
     "TITLE": "Bmi",
-    "SUBTITLE": "Body mass index",
+    "SUBTITLE": "Body mass index"
+  },
+  "EER": {
+    "TITLE": "Eer",
+    "SUBTITLE": "Energy expenditure at rest",
+    "AGE": "Age"
+  },
+  "SHARED": {
     "HEIGHT": "Height",
     "WEIGHT": "Weight",
     "CALC": "Calculate",

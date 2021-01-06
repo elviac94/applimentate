@@ -70,7 +70,14 @@
   },
   "BMI": {
     "TITLE": "Imc",
-    "SUBTITLE": "Índice de masa corporal",
+    "SUBTITLE": "Índice de masa corporal"
+  },
+  "EER": {
+    "TITLE": "Ger",
+    "SUBTITLE": "Gasto energético en reposo",
+    "AGE": "Edad"
+  },
+  "SHARED": {
     "HEIGHT": "Altura",
     "WEIGHT": "Peso",
     "CALC": "Calcular",

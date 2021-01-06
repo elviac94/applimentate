@@ -1,0 +1,12 @@
+@import '../../theme/mixins/auto-result.mixin.scss';
+@import '../../theme/mixins/auto-ion-item-bg.mixin.scss';
+
+ion-content {
+    position: relative;
+    overflow: scroll;
+    background-color: var(--green-sofest);
+    margin-bottom: 1000px;
+
+    @include auto-ion-item-bg(var(--green-sofest));
+    @include auto-result;
+}

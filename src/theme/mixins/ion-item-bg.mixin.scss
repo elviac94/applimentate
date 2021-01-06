@@ -1,0 +1,6 @@
+@mixin ion-item-bg($color) {
+    --background: $color;
+    ion-label {
+        --background: $color;
+    }
+}

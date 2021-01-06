@@ -1,0 +1,7 @@
+@import './ion-item-bg.mixin.scss';
+
+@mixin auto-ion-item-bg($color) {
+    ion-item {
+        @include ion-item-bg($color);
+    }
+}

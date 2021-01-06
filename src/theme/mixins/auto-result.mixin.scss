@@ -1,0 +1,6 @@
+@import './result.mixin.scss';
+@mixin auto-result {
+    .result {
+        @include result;
+    }
+}
